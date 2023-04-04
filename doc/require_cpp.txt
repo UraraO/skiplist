@@ -1,0 +1,16 @@
+/*
+// 对模板参数T类型做出要求，需要C++20
+#include <vector>
+#include <array>
+
+template <class T>
+concept Check = requires {
+	T().clear();
+};
+
+template <Check T>
+struct G {};
+
+G<std::vector<char>> x;      // 成功
+G<std::string> y;            // 成功
+*/
