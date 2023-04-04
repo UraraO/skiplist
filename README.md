@@ -70,4 +70,4 @@ cmake --build ./build
 ```
 
 
-> 转自 https://github.com/youngyangyang04/Skiplist-CPP。 代码随想录
+> 本项目基于代码随想录的Skiplist-CPP优化而来 https://github.com/youngyangyang04/Skiplist-CPP。 
