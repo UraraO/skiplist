@@ -344,13 +344,13 @@ int skiplist<V, K>::erase(K k) {
 template<class V, CheckType K>
 void skiplist<V, K>::dump_file() {
 	_file_writer.open(DUMP_FILE_PATH);
-	Node<K, V> *node = _header->next_p[0];
-	std::cout << "dump_file-----------------" << std::endl;
+	Node<V, K> *node = _header->next_p->at(0);
+	cout << "dump_file-----------------" << std::endl;
 
 	while (node != nullptr) {
 		_file_writer << node->get_key() << ":" << node->get_value() << "\n";
-		std::cout << node->get_key() << ":" << node->get_value() << ";\n";
-		node = node->next_p[0];
+		cout << node->get_key() << ":" << node->get_value() << ";\n";
+		node = node->next_p->at(0);
 	}
 
 	_file_writer.flush();

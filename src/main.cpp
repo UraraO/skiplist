@@ -87,6 +87,9 @@ int main() {
 	elapsed = finish - start;
 	std::cout << "find elapsed:" << elapsed.count() << std::endl;
 	time_record.push_back(elapsed);
+
+
+	skiplist1.dump_file();
 	/////////////////////////////////////////
 	// erase test
 	start = std::chrono::high_resolution_clock::now();
@@ -99,6 +102,7 @@ int main() {
 	elapsed = finish - start;
 	std::cout << "erase elapsed:" << elapsed.count() << std::endl;
 	time_record.push_back(elapsed);
+
 
 	// result time print
 	cout << endl;
